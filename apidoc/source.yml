@@ -1,0 +1,223 @@
+configuration:
+  title: Quantified School
+  description: Web API documentation — ECAL Quantified School project
+  uri: http://178.62.253.111
+categories:
+  Datas:
+    description: Sensors data
+  Raspberry:
+    description: Raspberry Pi informations
+versions:
+  v1.0:
+    status: current
+    major: 1
+    minor: 0
+    methods:
+      DatasList:
+          label: List
+          category: Datas
+          uri: /?address={address}&from={from}&to={to}
+          method: get
+          code: 200
+          description: Listing of last 500 records with specific time range parameters
+          request_parameters:
+             address:
+                 type: string
+                 description: Sensor address
+                 optional: false
+                 sample: N105S3
+                 generic: false
+             from:
+                 type: string
+                 description: Date from with date format "%d/%m/%Y_%H:%M:%S"
+                 optional: false
+                 sample: 25/02/2015_10:10:00
+                 generic: false
+             to:
+                 type: string
+                 description: Date to  with date format "%d/%m/%Y_%H:%M:%S"
+                 optional: false
+                 sample: 27/04/2015_10:10:00
+                 generic: false
+          response_body:
+             type: object
+             properties:
+                 _id:
+                    type: object
+                    properties:
+                      oid:
+                         type: string
+                         description: Unique index
+                 address:
+                    type: string
+                    description: Sensor Address identifier
+                 domain:
+                    type: string
+                    description: Sensor Domain identifier
+                 property:
+                    type: string
+                    description: Sensor Property identifier
+                 timestamp:
+                    type: object
+                    properties:
+                      date:
+                         type: integer
+                         description: Millis timestamp
+                 value:
+                    type: Integer
+                    description: Value
+      DatasLive:
+          label: Live
+          category: Datas
+          uri: /live?address={address}&limit={limit}
+          method: get
+          code: 200
+          description: Listing of last records with a limit of results.  
+          request_parameters:
+             address:
+                 type: string
+                 description: Sensor address
+                 optional: true
+                 sample: N105S3
+                 generic: false
+             limit:
+                 type: integer
+                 description: Limit of results
+                 optional: true
+                 sample: 1
+                 generic: false
+          response_body:
+             type: object
+             properties:
+                 _id:
+                    type: object
+                    properties:
+                      oid:
+                         type: string
+                         description: Unique index
+                 address:
+                    type: string
+                    description: Sensor Address identifier
+                 domain:
+                    type: string
+                    description: Sensor Domain identifier
+                 property:
+                    type: string
+                    description: Sensor Property identifier
+                 timestamp:
+                    type: object
+                    properties:
+                      date:
+                         type: integer
+                         description: Millis timestamp
+                 value:
+                    type: Integer
+                    description: Value
+      DatasAll:
+          label: All
+          category: Datas
+          uri: /live?all={address}
+          method: get
+          code: 200
+          description: Listing of all records for a specific address.
+          request_parameters:
+             address:
+                 type: string
+                 description: Sensor address
+                 optional: false
+                 sample: N105S3
+                 generic: false
+          response_body:
+             type: object
+             properties:
+                 _id:
+                    type: object
+                    properties:
+                      oid:
+                         type: string
+                         description: Unique index
+                 address:
+                    type: string
+                    description: Sensor Address identifier
+                 domain:
+                    type: string
+                    description: Sensor Domain identifier
+                 property:
+                    type: string
+                    description: Sensor Property identifier
+                 timestamp:
+                    type: object
+                    properties:
+                      date:
+                         type: integer
+                         description: Millis timestamp
+                 value:
+                    type: Integer
+                    description: Value
+      RaspberryList:
+          label: List
+          category: Raspberry
+          uri: /infos
+          method: get
+          code: 200
+          description: Raspberry Pi informations
+          response_body:
+             type: object
+             properties:
+                 _id:
+                    type: object
+                    properties:
+                      oid:
+                         type: string
+                         description: Unique index
+                 alias:
+                    type: string
+                    description: Raspberry Pi Alias identifier
+                 description:
+                    type: string
+                    description: Raspberry Pi description (Location)
+                 ip:
+                    type: string
+                    description: Raspberry Pi IP address 
+                 mac:
+                    type: string
+                    description: Raspberry Pi MAC address
+    types:
+          Version:
+            description: A version
+            format:
+              pretty: VN.N
+              advanced: V\d+\.\d+
+            item:
+              type: string
+              sample: v1.0
+          Data:
+            description: A data
+            item:
+              type: object
+              properties:
+                id:
+                  type: integer
+                  description: Data identifier
+                name:
+                  type: string
+                  description: Name of the data
+                users:
+                  type: array
+                  description: List of users
+                  items:
+                    type: Data
+          User:
+            description: A user
+            item:
+              type: object
+              properties:
+                id:
+                  type: integer
+                  description: User identifier
+                name:
+                  type: string
+                  description: Name of the user
+                email:
+                  type: string
+                  description: Email address of the user

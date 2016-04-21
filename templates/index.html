@@ -1,0 +1,605 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Quantified School</title>
+    
+<link href="{{ url_for('static', filename='css/combined.css') }}" rel="stylesheet">
+<script type="text/javascript" src="{{ url_for('static', filename='js/combined.js') }}"></script>
+     
+</head>
+<body>
+    <div class="jumbotron">
+    <div class="container">
+        <h1>Quantified School</h1><p>
+        Web API documentation — ECAL Quantified School project
+        </p></div>
+</div><div id="help-modal" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                <h3>Keyboard Shortcuts</h3>
+            </div>
+            <div class="modal-body">
+                <div class="help_row">
+                    <h4>Site wide shortcuts</h4>
+                    <dl class="keyboard-mappings">
+                        <dt>?</dt>
+                        <dd>Bring up this help dialog</dd>
+                    </dl>
+                    <dl class="keyboard-mappings">
+                        <dt>esc</dt>
+                        <dd>Hide this help dialog</dd>
+                    </dl>
+                    <dl class="keyboard-mappings">
+                        <dt>/</dt>
+                        <dd>Focus search bar</dd>
+                    </dl>
+                </div>
+                <div class="help_row">
+                    <h4>Navigation</h4>
+                    <dl class="keyboard-mappings">
+                        <dt>j <em>or</em> n</dt>
+                        <dd>Move to next method or type</dd>
+                    </dl>
+                    <dl class="keyboard-mappings">
+                        <dt>k <em>or</em> p</dt>
+                        <dd>Move to previous method or type</dd>
+                    </dl>
+            
+                </div>
+            
+            </div>
+        </div>
+    </div>
+</div><div class="container">
+    <div class="row">
+        <div class="col-md-3">
+            <div class="doc-sidebar"><input type="search" placeholder="search" class="col-md-12 form-control">
+<div class="scroll-spyable">
+    <ul class="nav nav-list doc-sidenav">
+        <li class="nav-header"><h5>Methods</h5></li><li class="nav-header" data-group="Datas"><a href="javascript:navigateTo({category: 'Datas'}, ['category', 'method', 'type'])" data-target="#c-Datas"><h6>Datas</h6></a></li>
+        <li data-group="Datas"  data-item="All"><a href="javascript:navigateTo({category: 'Datas', method: 'DatasAll'}, ['category', 'method'])" data-target="#m-DatasAll"><span>All</span></a></li>
+        <li data-group="Datas"  data-item="List"><a href="javascript:navigateTo({category: 'Datas', method: 'DatasList'}, ['category', 'method'])" data-target="#m-DatasList"><span>List</span></a></li>
+        <li data-group="Datas"  data-item="Live"><a href="javascript:navigateTo({category: 'Datas', method: 'DatasLive'}, ['category', 'method'])" data-target="#m-DatasLive"><span>Live</span></a></li>
+        <li class="separator"></li><li class="nav-header" data-group="Raspberry"><a href="javascript:navigateTo({category: 'Raspberry'}, ['category', 'method', 'type'])" data-target="#c-Raspberry"><h6>Raspberry</h6></a></li>
+        <li data-group="Raspberry"  data-item="List"><a href="javascript:navigateTo({category: 'Raspberry', method: 'RaspberryList'}, ['category', 'method'])" data-target="#m-RaspberryList"><span>List</span></a></li>
+    </ul>
+    <ul class="nav nav-list doc-sidenav">
+        <li class="nav-header"><h5>Types</h5></li>
+    </ul>
+</div>
+            </div>
+        </div>
+        <div class="col-md-9">
+            <div id="item-head" class="item">
+                <h4></h4>
+                <div class="diff-header"></div>
+                <div class="stack">
+                    <h5>hello</h5>
+                </div>
+            </div>
+            <div class="page-header">
+                <h2>Methods</h2>
+            </div>
+            <ul class="list-unstyled">
+    <li class="category" id="c-Datas"><h3>Datas</h3>
+        <div class="description">Sensors data</div>
+        <ul class="list-unstyled">
+            <li class="method item" id="m-DatasAll" data-method="GET">
+                <h4>All</h4><div class="nocontents">no implementation for this version</div>
+                <div class="contents">
+
+<h5 class="title"></h5>
+
+<div class="description stack">
+    
+    <div class="diff_version" data-version="v1.0">Listing of all records for a specific address.</div></div><div class="request stack">
+    <h5><i class="i-request"></i> Request: </h5>
+    <h6>Resource: </h6>
+
+    <code  class="diff_version" data-version="v1.0"><span class="hur">http://178.62.253.111/all?address={address}</span></code>
+    <h6>URI Parameters: </h6><table class="table table-bordered table-hover table-condensed">
+        <colgroup>
+            <col></col>
+            <col width="160px"></col>
+            <col width="70px"></col>
+            <col width="50%"></col>
+        </colgroup>
+        <thead>
+            <tr>
+            <th><span
+            >Parameter</span></th>
+            <th><span
+            >Type</span></th>
+            <th><span
+            >Optional</span></th>
+            <th><span
+            >Description</span></th>
+            </tr>
+        </thead>
+        <tbody>
+            
+        <tr class="diff_version " data-version="v1.0">
+            <td><span class="str">address</span></td>
+            <td><span class="typ">string<td><span class="lit"></span></td>
+            <td><span class="com">Sensor address</span></td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+
+<div class="response stack">
+    <h5><i class="i-response"></i> Response: </h5>
+    <h6>Body: </h6>
+    <div class="code"><table class="table-hover">
+        <colgroup>
+            <col width="50%%"></col>
+            <col width="50%%"></col>
+        </colgroup>
+        <tbody>
+
+    <tr class="diff_version" data-version="v1.0">
+        <td><span class="pun">{</span></td>
+        <td class="com"></td>
+    </tr>
+    <tr class="diff_version" data-version="v1.0">
+        <td>  <span class="str">"_id"</span><span class="pun">: </span><span class="pun">{</span></td>
+        <td class="com"></td>
+    </tr>
+    <tr class="diff_version" data-version="v1.0">
+        <td>    <span class="str">"oid"</span><span class="pun">: </span><span class="typ">string</span></td>
+        <td class="com">Unique index</td>
+    </tr>
+    <tr class="diff_version" data-version="v1.0">
+        <td>  <span class="pun">}</span><span class="pun">,</span></td>
+        <td></td>
+    </tr>
+    <tr class="diff_version" data-version="v1.0">
+        <td>  <span class="str">"address"</span><span class="pun">: </span><span class="typ">string</span><span class="pun">,</span></td>
+        <td class="com">Sensor Address identifier</td>
+    </tr>
+    <tr class="diff_version" data-version="v1.0">
+        <td>  <span class="str">"domain"</span><span class="pun">: </span><span class="typ">string</span><span class="pun">,</span></td>
+        <td class="com">Sensor Domain identifier</td>
+    </tr>
+    <tr class="diff_version" data-version="v1.0">
+        <td>  <span class="str">"property"</span><span class="pun">: </span><span class="typ">string</span><span class="pun">,</span></td>
+        <td class="com">Sensor Property identifier</td>
+    </tr>
+    <tr class="diff_version" data-version="v1.0">
+        <td>  <span class="str">"timestamp"</span><span class="pun">: </span><span class="pun">{</span></td>
+        <td class="com"></td>
+    </tr>
+    <tr class="diff_version" data-version="v1.0">
+        <td>    <span class="str">"date"</span><span class="pun">: </span><span class="typ">integer</span></td>
+        <td class="com">Millis timestamp</td>
+    </tr>
+    <tr class="diff_version" data-version="v1.0">
+        <td>  <span class="pun">}</span><span class="pun">,</span></td>
+        <td></td>
+    </tr>
+    <tr class="diff_version" data-version="v1.0">
+        <td>  <span class="str">"value"</span><span class="pun">: </span><span class="typ">integer</span></td>
+        <td class="com">Value</td>
+    </tr>
+    <tr class="diff_version" data-version="v1.0">
+        <td><span class="pun">}</span></td>
+        <td></td>
+    </tr>
+        </tbody>
+    </table></div>
+</div><div class="stack sample"><div data-version="v1.0">
+
+<h5><i class="i-sample"></i> Sample: </h5>
+<h6>Request: </h6>
+<div class="code"><span class="hme">GET</span> <span class="hur">/all?address=N105S3</span> <span class="hpr">HTTP/1.1</span>
+<span class="hat">Content-Type</span><span class="pun">: </span><span class="hva">application/json; charset=utf-8</span>
+
+</div>
+        <h6>Response: </h6>
+        <div class="code"><span class="hpr">HTTP/1.1</span> <span class="lit">200</span> <span class="str">OK</span>
+<span class="hat">Content-Type</span><span class="pun">: </span><span class="hva">application/json; charset=utf-8</span>
+
+<span class="pun">{
+</span>  <span class="str">"_id"</span><span class="pun">: </span><span class="pun">{
+</span>    <span class="str">"oid"</span><span class="pun">: </span><span class="str">"my_oid"</span>
+  <span class="pun">}</span><span class="pun">,
+</span>  <span class="str">"address"</span><span class="pun">: </span><span class="str">"my_address"</span><span class="pun">,
+</span>  <span class="str">"domain"</span><span class="pun">: </span><span class="str">"my_domain"</span><span class="pun">,
+</span>  <span class="str">"property"</span><span class="pun">: </span><span class="str">"my_property"</span><span class="pun">,
+</span>  <span class="str">"timestamp"</span><span class="pun">: </span><span class="pun">{
+</span>    <span class="str">"date"</span><span class="pun">: </span><span class="lit">42</span>
+  <span class="pun">}</span><span class="pun">,
+</span>  <span class="str">"value"</span><span class="pun">: </span><span class="lit">42</span>
+<span class="pun">}</span></div></div></div>
+                </div>
+            </li>
+            <li class="method item" id="m-DatasList" data-method="GET">
+                <h4>List</h4><div class="nocontents">no implementation for this version</div>
+                <div class="contents">
+
+<h5 class="title"></h5>
+
+<div class="description stack">
+    
+    <div class="diff_version" data-version="v1.0">Listing of last 500 records with specific time range parameters</div></div><div class="request stack">
+    <h5><i class="i-request"></i> Request: </h5>
+    <h6>Resource: </h6>
+
+    <code  class="diff_version" data-version="v1.0"><span class="hur">http://178.62.253.111/?address={address}&from={from}&to={to}</span></code>
+    <h6>URI Parameters: </h6><table class="table table-bordered table-hover table-condensed">
+        <colgroup>
+            <col></col>
+            <col width="160px"></col>
+            <col width="70px"></col>
+            <col width="50%"></col>
+        </colgroup>
+        <thead>
+            <tr>
+            <th><span
+            >Parameter</span></th>
+            <th><span
+            >Type</span></th>
+            <th><span
+            >Optional</span></th>
+            <th><span
+            >Description</span></th>
+            </tr>
+        </thead>
+        <tbody>
+            
+        <tr class="diff_version " data-version="v1.0">
+            <td><span class="str">address</span></td>
+            <td><span class="typ">string<td><span class="lit"></span></td>
+            <td><span class="com">Sensor address</span></td>
+        </tr>
+        <tr class="diff_version " data-version="v1.0">
+            <td><span class="str">from</span></td>
+            <td><span class="typ">string<td><span class="lit"></span></td>
+            <td><span class="com">Date from with date format "%d/%m/%Y_%H:%M:%S"</span></td>
+        </tr>
+        <tr class="diff_version " data-version="v1.0">
+            <td><span class="str">to</span></td>
+            <td><span class="typ">string<td><span class="lit"></span></td>
+            <td><span class="com">Date to  with date format "%d/%m/%Y_%H:%M:%S"</span></td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+
+<div class="response stack">
+    <h5><i class="i-response"></i> Response: </h5>
+    <h6>Body: </h6>
+    <div class="code"><table class="table-hover">
+        <colgroup>
+            <col width="50%%"></col>
+            <col width="50%%"></col>
+        </colgroup>
+        <tbody>
+
+    <tr class="diff_version" data-version="v1.0">
+        <td><span class="pun">{</span></td>
+        <td class="com"></td>
+    </tr>
+    <tr class="diff_version" data-version="v1.0">
+        <td>  <span class="str">"_id"</span><span class="pun">: </span><span class="pun">{</span></td>
+        <td class="com"></td>
+    </tr>
+    <tr class="diff_version" data-version="v1.0">
+        <td>    <span class="str">"oid"</span><span class="pun">: </span><span class="typ">string</span></td>
+        <td class="com">Unique index</td>
+    </tr>
+    <tr class="diff_version" data-version="v1.0">
+        <td>  <span class="pun">}</span><span class="pun">,</span></td>
+        <td></td>
+    </tr>
+    <tr class="diff_version" data-version="v1.0">
+        <td>  <span class="str">"address"</span><span class="pun">: </span><span class="typ">string</span><span class="pun">,</span></td>
+        <td class="com">Sensor Address identifier</td>
+    </tr>
+    <tr class="diff_version" data-version="v1.0">
+        <td>  <span class="str">"domain"</span><span class="pun">: </span><span class="typ">string</span><span class="pun">,</span></td>
+        <td class="com">Sensor Domain identifier</td>
+    </tr>
+    <tr class="diff_version" data-version="v1.0">
+        <td>  <span class="str">"property"</span><span class="pun">: </span><span class="typ">string</span><span class="pun">,</span></td>
+        <td class="com">Sensor Property identifier</td>
+    </tr>
+    <tr class="diff_version" data-version="v1.0">
+        <td>  <span class="str">"timestamp"</span><span class="pun">: </span><span class="pun">{</span></td>
+        <td class="com"></td>
+    </tr>
+    <tr class="diff_version" data-version="v1.0">
+        <td>    <span class="str">"date"</span><span class="pun">: </span><span class="typ">integer</span></td>
+        <td class="com">Millis timestamp</td>
+    </tr>
+    <tr class="diff_version" data-version="v1.0">
+        <td>  <span class="pun">}</span><span class="pun">,</span></td>
+        <td></td>
+    </tr>
+    <tr class="diff_version" data-version="v1.0">
+        <td>  <span class="str">"value"</span><span class="pun">: </span><span class="typ">integer</span></td>
+        <td class="com">Value</td>
+    </tr>
+    <tr class="diff_version" data-version="v1.0">
+        <td><span class="pun">}</span></td>
+        <td></td>
+    </tr>
+        </tbody>
+    </table></div>
+</div><div class="stack sample"><div data-version="v1.0">
+
+<h5><i class="i-sample"></i> Sample: </h5>
+<h6>Request: </h6>
+<div class="code"><span class="hme">GET</span> <span class="hur">/?address=N105S3&from=25/02/2015_10:10:00&to=27/04/2015_10:10:00</span> <span class="hpr">HTTP/1.1</span>
+<span class="hat">Content-Type</span><span class="pun">: </span><span class="hva">application/json; charset=utf-8</span>
+
+</div>
+        <h6>Response: </h6>
+        <div class="code"><span class="hpr">HTTP/1.1</span> <span class="lit">200</span> <span class="str">OK</span>
+<span class="hat">Content-Type</span><span class="pun">: </span><span class="hva">application/json; charset=utf-8</span>
+
+<span class="pun">{
+</span>  <span class="str">"_id"</span><span class="pun">: </span><span class="pun">{
+</span>    <span class="str">"oid"</span><span class="pun">: </span><span class="str">"my_oid"</span>
+  <span class="pun">}</span><span class="pun">,
+</span>  <span class="str">"address"</span><span class="pun">: </span><span class="str">"my_address"</span><span class="pun">,
+</span>  <span class="str">"domain"</span><span class="pun">: </span><span class="str">"my_domain"</span><span class="pun">,
+</span>  <span class="str">"property"</span><span class="pun">: </span><span class="str">"my_property"</span><span class="pun">,
+</span>  <span class="str">"timestamp"</span><span class="pun">: </span><span class="pun">{
+</span>    <span class="str">"date"</span><span class="pun">: </span><span class="lit">42</span>
+  <span class="pun">}</span><span class="pun">,
+</span>  <span class="str">"value"</span><span class="pun">: </span><span class="lit">42</span>
+<span class="pun">}</span></div></div></div>
+                </div>
+            </li>
+            <li class="method item" id="m-DatasLive" data-method="GET">
+                <h4>Live</h4><div class="nocontents">no implementation for this version</div>
+                <div class="contents">
+
+<h5 class="title"></h5>
+
+<div class="description stack">
+    
+    <div class="diff_version" data-version="v1.0">Listing of last records with a limit of results.</div></div><div class="request stack">
+    <h5><i class="i-request"></i> Request: </h5>
+    <h6>Resource: </h6>
+
+    <code  class="diff_version" data-version="v1.0"><span class="hur">http://178.62.253.111/live?address={address}&limit={limit}</span></code>
+    <h6>URI Parameters: </h6><table class="table table-bordered table-hover table-condensed">
+        <colgroup>
+            <col></col>
+            <col width="160px"></col>
+            <col width="70px"></col>
+            <col width="50%"></col>
+        </colgroup>
+        <thead>
+            <tr>
+            <th><span
+            >Parameter</span></th>
+            <th><span
+            >Type</span></th>
+            <th><span
+            >Optional</span></th>
+            <th><span
+            >Description</span></th>
+            </tr>
+        </thead>
+        <tbody>
+            
+        <tr class="diff_version " data-version="v1.0">
+            <td><span class="str">address</span></td>
+            <td><span class="typ">string<td><span class="lit">Optional</span></td>
+            <td><span class="com">Sensor address</span></td>
+        </tr>
+        <tr class="diff_version " data-version="v1.0">
+            <td><span class="str">limit</span></td>
+            <td><span class="typ">integer<td><span class="lit">Optional</span></td>
+            <td><span class="com">Limit of results</span></td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+
+<div class="response stack">
+    <h5><i class="i-response"></i> Response: </h5>
+    <h6>Body: </h6>
+    <div class="code"><table class="table-hover">
+        <colgroup>
+            <col width="50%%"></col>
+            <col width="50%%"></col>
+        </colgroup>
+        <tbody>
+
+    <tr class="diff_version" data-version="v1.0">
+        <td><span class="pun">{</span></td>
+        <td class="com"></td>
+    </tr>
+    <tr class="diff_version" data-version="v1.0">
+        <td>  <span class="str">"_id"</span><span class="pun">: </span><span class="pun">{</span></td>
+        <td class="com"></td>
+    </tr>
+    <tr class="diff_version" data-version="v1.0">
+        <td>    <span class="str">"oid"</span><span class="pun">: </span><span class="typ">string</span></td>
+        <td class="com">Unique index</td>
+    </tr>
+    <tr class="diff_version" data-version="v1.0">
+        <td>  <span class="pun">}</span><span class="pun">,</span></td>
+        <td></td>
+    </tr>
+    <tr class="diff_version" data-version="v1.0">
+        <td>  <span class="str">"address"</span><span class="pun">: </span><span class="typ">string</span><span class="pun">,</span></td>
+        <td class="com">Sensor Address identifier</td>
+    </tr>
+    <tr class="diff_version" data-version="v1.0">
+        <td>  <span class="str">"domain"</span><span class="pun">: </span><span class="typ">string</span><span class="pun">,</span></td>
+        <td class="com">Sensor Domain identifier</td>
+    </tr>
+    <tr class="diff_version" data-version="v1.0">
+        <td>  <span class="str">"property"</span><span class="pun">: </span><span class="typ">string</span><span class="pun">,</span></td>
+        <td class="com">Sensor Property identifier</td>
+    </tr>
+    <tr class="diff_version" data-version="v1.0">
+        <td>  <span class="str">"timestamp"</span><span class="pun">: </span><span class="pun">{</span></td>
+        <td class="com"></td>
+    </tr>
+    <tr class="diff_version" data-version="v1.0">
+        <td>    <span class="str">"date"</span><span class="pun">: </span><span class="typ">integer</span></td>
+        <td class="com">Millis timestamp</td>
+    </tr>
+    <tr class="diff_version" data-version="v1.0">
+        <td>  <span class="pun">}</span><span class="pun">,</span></td>
+        <td></td>
+    </tr>
+    <tr class="diff_version" data-version="v1.0">
+        <td>  <span class="str">"value"</span><span class="pun">: </span><span class="typ">integer</span></td>
+        <td class="com">Value</td>
+    </tr>
+    <tr class="diff_version" data-version="v1.0">
+        <td><span class="pun">}</span></td>
+        <td></td>
+    </tr>
+        </tbody>
+    </table></div>
+</div><div class="stack sample"><div data-version="v1.0">
+
+<h5><i class="i-sample"></i> Sample: </h5>
+<h6>Request: </h6>
+<div class="code"><span class="hme">GET</span> <span class="hur">/live?address=N105S3&limit=1</span> <span class="hpr">HTTP/1.1</span>
+<span class="hat">Content-Type</span><span class="pun">: </span><span class="hva">application/json; charset=utf-8</span>
+
+</div>
+        <h6>Response: </h6>
+        <div class="code"><span class="hpr">HTTP/1.1</span> <span class="lit">200</span> <span class="str">OK</span>
+<span class="hat">Content-Type</span><span class="pun">: </span><span class="hva">application/json; charset=utf-8</span>
+
+<span class="pun">{
+</span>  <span class="str">"_id"</span><span class="pun">: </span><span class="pun">{
+</span>    <span class="str">"oid"</span><span class="pun">: </span><span class="str">"my_oid"</span>
+  <span class="pun">}</span><span class="pun">,
+</span>  <span class="str">"address"</span><span class="pun">: </span><span class="str">"my_address"</span><span class="pun">,
+</span>  <span class="str">"domain"</span><span class="pun">: </span><span class="str">"my_domain"</span><span class="pun">,
+</span>  <span class="str">"property"</span><span class="pun">: </span><span class="str">"my_property"</span><span class="pun">,
+</span>  <span class="str">"timestamp"</span><span class="pun">: </span><span class="pun">{
+</span>    <span class="str">"date"</span><span class="pun">: </span><span class="lit">42</span>
+  <span class="pun">}</span><span class="pun">,
+</span>  <span class="str">"value"</span><span class="pun">: </span><span class="lit">42</span>
+<span class="pun">}</span></div></div></div>
+                </div>
+            </li>
+        </ul>
+    </li>
+    <li class="category" id="c-Raspberry"><h3>Raspberry</h3>
+        <div class="description">Raspberry Pi informations</div>
+        <ul class="list-unstyled">
+            <li class="method item" id="m-RaspberryList" data-method="GET">
+                <h4>List</h4><div class="nocontents">no implementation for this version</div>
+                <div class="contents">
+
+<h5 class="title"></h5>
+
+<div class="description stack">
+    
+    <div class="diff_version" data-version="v1.0">Raspberry Pi informations</div></div><div class="request stack">
+    <h5><i class="i-request"></i> Request: </h5>
+    <h6>Resource: </h6>
+
+    <code  class="diff_version" data-version="v1.0"><span class="hur">http://178.62.253.111/infos</span></code>
+</div>
+
+<div class="response stack">
+    <h5><i class="i-response"></i> Response: </h5>
+    <h6>Body: </h6>
+    <div class="code"><table class="table-hover">
+        <colgroup>
+            <col width="50%%"></col>
+            <col width="50%%"></col>
+        </colgroup>
+        <tbody>
+
+    <tr class="diff_version" data-version="v1.0">
+        <td><span class="pun">{</span></td>
+        <td class="com"></td>
+    </tr>
+    <tr class="diff_version" data-version="v1.0">
+        <td>  <span class="str">"_id"</span><span class="pun">: </span><span class="pun">{</span></td>
+        <td class="com"></td>
+    </tr>
+    <tr class="diff_version" data-version="v1.0">
+        <td>    <span class="str">"oid"</span><span class="pun">: </span><span class="typ">string</span></td>
+        <td class="com">Unique index</td>
+    </tr>
+    <tr class="diff_version" data-version="v1.0">
+        <td>  <span class="pun">}</span><span class="pun">,</span></td>
+        <td></td>
+    </tr>
+    <tr class="diff_version" data-version="v1.0">
+        <td>  <span class="str">"alias"</span><span class="pun">: </span><span class="typ">string</span><span class="pun">,</span></td>
+        <td class="com">Raspberry Pi Alias identifier</td>
+    </tr>
+    <tr class="diff_version" data-version="v1.0">
+        <td>  <span class="str">"description"</span><span class="pun">: </span><span class="typ">string</span><span class="pun">,</span></td>
+        <td class="com">Raspberry Pi description (Location)</td>
+    </tr>
+    <tr class="diff_version" data-version="v1.0">
+        <td>  <span class="str">"ip"</span><span class="pun">: </span><span class="typ">string</span><span class="pun">,</span></td>
+        <td class="com">Raspberry Pi IP address</td>
+    </tr>
+    <tr class="diff_version" data-version="v1.0">
+        <td>  <span class="str">"mac"</span><span class="pun">: </span><span class="typ">string</span></td>
+        <td class="com">Raspberry Pi MAC address</td>
+    </tr>
+    <tr class="diff_version" data-version="v1.0">
+        <td><span class="pun">}</span></td>
+        <td></td>
+    </tr>
+        </tbody>
+    </table></div>
+</div><div class="stack sample"><div data-version="v1.0">
+
+<h5><i class="i-sample"></i> Sample: </h5>
+<h6>Request: </h6>
+<div class="code"><span class="hme">GET</span> <span class="hur">/infos</span> <span class="hpr">HTTP/1.1</span>
+<span class="hat">Content-Type</span><span class="pun">: </span><span class="hva">application/json; charset=utf-8</span>
+
+</div>
+        <h6>Response: </h6>
+        <div class="code"><span class="hpr">HTTP/1.1</span> <span class="lit">200</span> <span class="str">OK</span>
+<span class="hat">Content-Type</span><span class="pun">: </span><span class="hva">application/json; charset=utf-8</span>
+
+<span class="pun">{
+</span>  <span class="str">"_id"</span><span class="pun">: </span><span class="pun">{
+</span>    <span class="str">"oid"</span><span class="pun">: </span><span class="str">"my_oid"</span>
+  <span class="pun">}</span><span class="pun">,
+</span>  <span class="str">"alias"</span><span class="pun">: </span><span class="str">"my_alias"</span><span class="pun">,
+</span>  <span class="str">"description"</span><span class="pun">: </span><span class="str">"my_description"</span><span class="pun">,
+</span>  <span class="str">"ip"</span><span class="pun">: </span><span class="str">"my_ip"</span><span class="pun">,
+</span>  <span class="str">"mac"</span><span class="pun">: </span><span class="str">"my_mac"</span>
+<span class="pun">}</span></div></div></div>
+                </div>
+            </li>
+        </ul>
+    </li>
+            </ul>
+            <div class="page-header">
+                <h2>Types</h2>
+            </div>
+            <ul class="list-unstyled">
+            </ul>
+        </div>
+    </div>
+</div>
+
+<footer>
+    <div class="btn-group">
+        <button class="btn btn-default i-previous" type="button"></button>
+        <button class="btn btn-default i-top" type="button"></button>
+        <button class="btn btn-default i-next" type="button"></button>
+    </div>
+</footer>
+
+</body>
+</html>

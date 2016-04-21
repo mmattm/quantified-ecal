@@ -1,0 +1,45 @@
+<html>
+    <head>
+        <title>Quantified school example 1</title>
+
+        <!-- javascripts -->
+        <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
+    </head>
+    <body>
+        <table id="records-table"></table>
+    </body>
+
+    <script type="text/javascript">
+        $(document).ready(function(){
+
+            function updateData()
+            {
+                // Delete everything
+                $('body').empty();
+
+                // Add all the data
+                $.ajax({
+                    url: "http://178.62.253.111/live",
+                    context: document.body,
+                    success: function(response){
+                        $.each(response, function(i, item) {
+                            $('<tr>').append(
+                                    $('<td>').text(item.address),
+                                    $('<td>').text(item.domain),
+                                    $('<td>').text(item.property),
+                                    $('<td>').text(item.timestamp),
+                                    $('<td>').text(item.value)
+                            ).appendTo('#records_table');
+                            // $('#records_table').append($tr);
+                            //console.log($tr.wrap('<p>').html());
+                        });
+                    }
+                });
+            }
+
+            updateData();
+        });
+    </script>
+
+
+</html>

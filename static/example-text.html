@@ -1,0 +1,43 @@
+<html>
+    <head>
+        <title>Quantified school example 1</title>
+
+        <!-- javascripts -->
+        <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
+    </head>
+    <body>
+        <table id="records_table" border='1'>
+
+        </table>
+    </body>
+
+    <script type="text/javascript">
+        $(document).ready(function(){
+
+            function updateData() {
+                // Delete everything
+                //$('body').empty();
+                console.log('trying to get json');
+                $.getJSON("http://178.62.253.111/live", function (response) {
+                    console.log(response);
+                    $.each(response, function (i, item) {
+                        console.log(item);
+                        $('<tr>').append(
+                                $('<td>').text(item.address),
+                                $('<td>').text(item.domain),
+                                $('<td>').text(item.property),
+                                $('<td>').text(new Date(item.timestamp.$date + 7 * 3600 * 1000)),
+                                $('<td>').text(item.value)
+                        ).appendTo('#records_table');
+                    });
+                }).fail(function (jqxhr, textStatus, error) {
+                    var err = textStatus + ", " + error;
+                    console.log("Request Failed: " + err);
+                });
+            }
+            updateData();
+        });
+    </script>
+
+
+</html>
